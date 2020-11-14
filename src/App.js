@@ -1,15 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
 import * as React from "react";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default class App extends React.Component {
   
   state = {
     render: false
 	};
-
 
   componentDidMount() {
     setTimeout(function() { 
@@ -25,7 +23,8 @@ export default class App extends React.Component {
   
   modal = () => {
       return (
-        <Modal show={this.state.render} onHide={()=>this.handleClose()}>
+        <Modal show={this.state.render} onHide={()=>this.handleClose()} backdrop="static"
+        keyboard={false}>
         <Modal.Header closeButton>
           <Modal.Title>We've got a deal for you</Modal.Title>
         </Modal.Header>
