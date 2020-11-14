@@ -24,7 +24,7 @@ export default class App extends React.Component {
   modal = () => {
       return (
         <Modal show={this.state.render} onHide={()=>this.handleClose()} backdrop="static"
-        keyboard={false}>
+        keyboard={false} centered={true}>
         <Modal.Header closeButton>
           <Modal.Title>We've got a deal for you</Modal.Title>
         </Modal.Header>
